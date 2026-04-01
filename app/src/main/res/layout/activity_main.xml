@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp"
+        android:padding="16dp">
+
+        <!-- 🔹 TÍTULO -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="App Multimedia"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#212121"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="20dp"/>
+
+        <!-- 🔹 SUBTEXTO -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona una opción:"
+            android:textSize="16sp"
+            android:textColor="#555"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- 🔹 BOTONES SOUNDPOOL -->
+        <LinearLayout
+            android:id="@+id/botonesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/soundpool1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Tono 1"
+                android:tag="1"
+                android:backgroundTint="#6200EE"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/soundpool2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Tono 2"
+                android:tag="2"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#03DAC5"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <!-- 🔹 MEDIA PLAYER -->
+        <Button
+            android:id="@+id/mediaplayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reproducir Música"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- 🔹 GRABADOR -->
+        <Button
+            android:id="@+id/mediarecorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Grabar conversación"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 🔹 CARDVIEW LOG -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            card_view:cardCornerRadius="12dp"
+            card_view:cardElevation="6dp">
+
+            <ScrollView
+                android:id="@+id/ScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/Log"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Log:\n"
+                    android:textColor="#212121"
+                    android:textSize="14sp"/>
+            </ScrollView>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>
